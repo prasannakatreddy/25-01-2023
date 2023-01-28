@@ -1,0 +1,14 @@
+#level order traversal
+def levelOrder(root):
+  #  
+    temp=[]
+    q=[]
+    q.append(root)
+    while len(q)!=0:
+        temp.append(root.info)
+        print(temp[0])
+        if root.left is not None:
+            temp.append(root.left)
+        if root.right is not None:
+            temp.append(root.right)
+        
