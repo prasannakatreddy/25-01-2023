@@ -1,0 +1,12 @@
+def lca(root, v1, v2):
+  #Enter your code here
+  if root==None or root.info==v1 or root.info==v2:
+    return root
+  right=lca(root.right,v1,v2)
+  left=lca(root.left,v1,v2)
+  if right!=None and left!=None:
+    return root
+  elif right!=None:
+    return right
+  else:
+    return left
